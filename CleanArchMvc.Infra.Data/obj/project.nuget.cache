@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bVNHTDeTSa89Uz/gyrwDK71FxznSfLhkhWlQfEZ1qkA4ZQ+kdyAJtV6Xv+hJOn4W6yMXZiedf/W5f5U4+hVkXw==",
+  "dgSpecHash": "qpl6XapnwoEDwf/OTcJgjpuk9GGLQbq5xKhBh58BYPBbEwWS86E1QwunGdUWXyLZucETY5nXpFVAo45ESctK8g==",
   "success": true,
   "projectFilePath": "/home/usuario/Catalog/CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,8 @@
     "/home/usuario/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/home/usuario/.nuget/packages/npgsql/7.0.4/npgsql.7.0.4.nupkg.sha512",
+    "/home/usuario/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.4/npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
     "/home/usuario/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",

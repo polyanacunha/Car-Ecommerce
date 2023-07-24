@@ -15,3 +15,9 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\CleanArchMvc.Application\CleanArchMvc.Application.csproj" />
+		<ProjectReference Include="..\CleanArchMvc.Infra.Data\CleanArchMvc.Infra.Data.csproj" />
+	</ItemGroup>
+
+</Project>

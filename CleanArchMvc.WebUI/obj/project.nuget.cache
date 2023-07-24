@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cgVvgaR0mlMkhUQhK5wrN5yk26TxK0ieNqca0+HdPRZTh9B+KvqK837ZLS+7YFasN7FoERnTWRCxr6FwC1j7hQ==",
+  "dgSpecHash": "d+Wo1t9PUwu9ZIjJ4M8lFpl5qqivuVYUpUoeWUC1n65lP6QnqmMJIjZtK+7oSzRDvmx1XyQXfK3awkwLv7TYAA==",
   "success": true,
   "projectFilePath": "/home/usuario/Catalog/CleanArchMvc.WebUI/CleanArchMvc.WebUI.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,8 @@
     "/home/usuario/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/home/usuario/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/home/usuario/.nuget/packages/npgsql/7.0.4/npgsql.7.0.4.nupkg.sha512",
+    "/home/usuario/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.4/npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
     "/home/usuario/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "/home/usuario/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
