@@ -8,7 +8,7 @@ namespace CleanArchMvc.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
+[EnableCors("AllowOrigin")]
 public class VehiclesController : ControllerBase
 {
     private readonly IVehicleService _vehicleService;
@@ -16,7 +16,7 @@ public class VehiclesController : ControllerBase
     {
         _vehicleService = vehicleService;
     }
-    [EnableCors("AllowOrigin")]
+    
     [HttpGet]
     public async Task<ActionResult<IEnumerable<VehicleDTO>>> Get()
     {
@@ -27,7 +27,7 @@ public class VehiclesController : ControllerBase
         }
         return Ok(vehicles);
     }
-    [EnableCors("AllowOrigin")]
+    
     [HttpGet("{id:int}", Name = "GetVehicle")]
     public async Task<ActionResult<VehicleDTO>> Get(int id)
     {
@@ -38,7 +38,7 @@ public class VehiclesController : ControllerBase
         }
         return Ok(vehicle);
     }
-    [EnableCors("AllowOrigin")]
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult> Post([FromBody] VehicleDTO vehicleDto)
     {
@@ -50,7 +50,7 @@ public class VehiclesController : ControllerBase
         return new CreatedAtRouteResult("GetVehicle", new { id = vehicleDto.Id },
             vehicleDto);
     }
-    [EnableCors("AllowOrigin")]
+    [Authorize]
     [HttpPut]
     public async Task<ActionResult> Put(int id, [FromBody] VehicleDTO vehicleDto)
     {
@@ -64,7 +64,7 @@ public class VehiclesController : ControllerBase
 
         return Ok(vehicleDto);
     }
-    [EnableCors("AllowOrigin")]
+    [Authorize]
     [HttpDelete("{id:int}")]
     public async Task<ActionResult<VehicleDTO>> Delete(int id)
     {

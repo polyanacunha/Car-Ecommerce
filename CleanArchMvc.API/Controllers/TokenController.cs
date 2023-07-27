@@ -10,8 +10,9 @@ using System.Text;
 
 namespace CleanArchMvc.API.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
+[Route("api/[controller]")]
+[EnableCors("AllowOrigin")]
 public class TokenController : ControllerBase
 {
     private readonly IAuthenticate _authentication;
@@ -23,7 +24,6 @@ public class TokenController : ControllerBase
             throw new ArgumentNullException(nameof(authentication));
         _configuration = configuration;
     }
-    [EnableCors("AllowOrigin")]
     [HttpPost("CreateUser")]
     [ApiExplorerSettings(IgnoreApi = true)]
     [Authorize]
@@ -42,8 +42,7 @@ public class TokenController : ControllerBase
             return BadRequest(ModelState);
         }
     }
-    [EnableCors("AllowOrigin")]
-    [AllowAnonymous]
+
     [HttpPost("LoginUser")]
     public async Task<ActionResult<UserToken>> Login([FromBody] LoginModel userInfo)
     {

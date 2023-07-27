@@ -3,7 +3,7 @@ using Microsoft.OpenApi.Models;
 using System.Net;
 using System.Reflection;
 
-var AllowOrigin = "_AllowOrigin";
+var AllowOrigin = "AllowOrigin";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +12,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: AllowOrigin,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000/")
-                          .AllowAnyMethod()
+                          policy.AllowAnyMethod()
                           .AllowAnyHeader()
+                          .WithOrigins("http://localhost:3000")
+                        //   .AllowAnyOrigin()
                           .AllowCredentials();
                       });
 });
@@ -51,15 +52,6 @@ builder.Services.AddSwaggerGen(options =>
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
-// builder.Services.AddCors(options =>
-// {
-//     options.AddDefaultPolicy(builder =>
-//     {
-//         builder.AllowAnyOrigin()
-//                .AllowAnyMethod()
-//                .AllowAnyHeader();
-//     });
-// });
 
 var app = builder.Build();
 
@@ -70,9 +62,9 @@ if (app.Environment.IsDevelopment())
 }
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
-app.UseStatusCodePages();
+// app.UseStatusCodePages();
 app.UseRouting();
 app.UseCors(AllowOrigin);
 app.UseAuthentication();

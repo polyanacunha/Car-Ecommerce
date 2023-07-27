@@ -132,6 +132,8 @@ D:/_Cursos_Macoratti/Curso_Clean_Archictecture_Essencial/14_Migracao_NET7/CleanA
 /home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
 /home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Microsoft.OpenApi.dll
 /home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Mono.TextTemplating.dll
+/home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Npgsql.dll
+/home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -168,5 +170,3 @@ D:/_Cursos_Macoratti/Curso_Clean_Archictecture_Essencial/14_Migracao_NET7/CleanA
 /home/usuario/Catalog/CleanArchMvc.API/obj/Debug/net7.0/CleanArchMvc.API.pdb
 /home/usuario/Catalog/CleanArchMvc.API/obj/Debug/net7.0/CleanArchMvc.API.genruntimeconfig.cache
 /home/usuario/Catalog/CleanArchMvc.API/obj/Debug/net7.0/ref/CleanArchMvc.API.dll
-/home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Npgsql.dll
-/home/usuario/Catalog/CleanArchMvc.API/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

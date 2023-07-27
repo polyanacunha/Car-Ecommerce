@@ -12,7 +12,6 @@ public class VehicleConfiguration : IEntityTypeConfiguration<Vehicle>
         builder.Property(p => p.Nome).HasMaxLength(50).IsRequired();
         builder.Property(p => p.Marca).HasMaxLength(50).IsRequired();
         builder.Property(p => p.Modelo).HasMaxLength(50).IsRequired();
-        builder.Property(p => p.Foto).HasMaxLength(250).IsRequired();
 
         builder.Property(p => p.Valor).HasPrecision(10, 2);
 

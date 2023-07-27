@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchMvc.WebUI.Controllers;
 
+[EnableCors("AllowOrigin")]
 public class AccountController : Controller
 {
     private readonly IAuthenticate _authentication;
@@ -13,7 +14,7 @@ public class AccountController : Controller
     {
         _authentication = authentication;
     }
-    [EnableCors("AllowOrigin")]
+    
     [HttpGet]
     public IActionResult Login(string returnUrl)
     {
@@ -22,7 +23,7 @@ public class AccountController : Controller
             ReturnUrl = returnUrl
         });
     }
-    [EnableCors("AllowOrigin")]
+    
     [HttpPost]
     public async Task<IActionResult> Login(LoginViewModel model)
     {
@@ -42,13 +43,13 @@ public class AccountController : Controller
             return View(model);
         }
     }
-    [EnableCors("AllowOrigin")]
+    
     [HttpGet]
     public IActionResult Register()
     {
         return View();
     }
-    [EnableCors("AllowOrigin")]
+    
     [HttpPost]
     public async Task<IActionResult> Register(RegisterViewModel model)
     {

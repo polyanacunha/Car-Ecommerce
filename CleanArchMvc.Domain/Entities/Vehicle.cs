@@ -28,8 +28,6 @@ public sealed class Vehicle : Entity
 
         DomainExceptionValidation.When(valor < 0, "Invalid price value");
 
-        DomainExceptionValidation.When(foto?.Length > 250,
-            "Invalid image name, too long, maximum 250 characters");
 
         Nome = nome;
         Marca = marca;

@@ -1,7 +1,7 @@
 using CleanArchMvc.Domain.Account;
 using CleanArchMvc.Infra.IoC;
 
-var AllowOrigin = "_AllowOrigin";
+var AllowOrigin = "AllowOrigin";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
                       policy =>
                       {
                           
-                           policy.WithOrigins("http://localhost:3000/")
+                           policy.WithOrigins("http://127.0.0.1:3000;http://0.0.0.0:3000")
                           .AllowAnyMethod()
                           .AllowAnyHeader()
                           .AllowCredentials();
@@ -44,7 +44,7 @@ if (!app.Environment.IsDevelopment())
     //app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -54,8 +54,8 @@ app.UseRouting();
 SeedUserRoles(app);
 
 
-app.UseAuthentication();
 app.UseCors(AllowOrigin);
+app.UseAuthentication();
 app.UseAuthorization();
 // app.UseCors(builder =>
 // {
