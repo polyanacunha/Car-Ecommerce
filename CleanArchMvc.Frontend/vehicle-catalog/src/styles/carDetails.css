@@ -1,0 +1,57 @@
+.car-details-card {
+    width: 18rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .car-image {
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .car-model {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .car-brand {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  .car-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .car-description {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .car-edit-button,
+  .car-delete-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .car-edit-button:hover,
+  .car-delete-button:hover {
+    opacity: 0.9;
+  }
+  

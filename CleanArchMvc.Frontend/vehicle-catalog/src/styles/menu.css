@@ -1,0 +1,54 @@
+.menu{
+    position: fixed;
+    left:0px; 
+    top:0; 
+    width: 60%;
+    height: full;
+    border: border #222222;
+    color: white;
+    border-bottom: white;
+    list-style: none;
+
+}  
+.menu-principal ul li{
+    color: white;
+}
+.btn{
+    color: white;
+}
+.menu ul{
+    list-style-type: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+} 
+.menu ul li{
+    border-top: 0.6px solid rgb(255, 254, 254);
+    text-transform: uppercase;
+    color: rgb(20, 20, 20);
+
+}
+.menu {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid #ffffff; 
+    background-color: #8840da; 
+    transition: left 0.3s ease; }
+  
+  .menu.open {
+    width: 60%;
+    color: rgb(20, 20, 20);
+
+  }
+  
+  .menu.closed {
+    left: -100%; 
+  }
+  .menu-principal, .navbar, .nav{
+    background-color: #8840da;
+    color: rgb(20, 20, 20);
+  }
+ 
