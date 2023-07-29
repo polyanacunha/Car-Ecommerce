@@ -42,8 +42,8 @@ const Edit = () => {
     }
   };
   useEffect(() => {
-    return syncVehicleWithId();
-  }, []);
+     syncVehicleWithId();
+  });
   useEffect(() => {}, [vehicle]);
 
   const handleSubmit = (event) => {

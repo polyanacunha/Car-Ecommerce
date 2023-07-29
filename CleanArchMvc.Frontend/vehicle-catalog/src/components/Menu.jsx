@@ -21,14 +21,11 @@ export default function Menu() {
   function handleLoginClick() {
     window.location.href = "/login";
   }
-  function handleCardAdminClick() {
-    window.location.href = "/card";
-  }
   function handleCardUserClick() {
     window.location.href = "/cardUser";
   }
   const handleHome = () => {
-    navigate(`/home`);
+    navigate(`/`);
   };
   return (
     <nav className="navbar navbar-expand-lg">
@@ -67,7 +64,7 @@ export default function Menu() {
         
         <div/>
         <div className={`{ menu ${! nav ? 'closed' : 'open' }`}>
-          <h1>VOLTUS</h1>
+          <h1 onClick={() => handleHome()}>VOLTUS</h1>
           <ul className="pt-24">
           <li onClick={handleCarRegisterClick} className="p-4" type="submit" >Registre novo carro</li>
           <li onClick={handleCardUserClick} className="p-4" type="submit">Ver carros </li>

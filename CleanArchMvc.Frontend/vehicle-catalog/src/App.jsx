@@ -20,6 +20,7 @@ const App = () => {
       <Router>
         <AppRoutes />
       </Router>
+      <Home/>
       <Footer />
     </>
   );

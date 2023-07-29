@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import vehicleService from "../services/vehicleService";
 import "../styles/card.css";
 import { useSearchParams, useNavigate, Link } from "react-router-dom";
-// import { useAuth } from "./AuthContext";
 
 const VehicleList = ({username}) => {
   let navigate = useNavigate();
@@ -59,20 +58,14 @@ const VehicleList = ({username}) => {
               <p className="card-details">
                 <span>Preço:</span> R$ {vehicle.valor}
               </p>
-              {!isAdmin && (
+              {isAdmin && (
                 <div className="card-buttons">
                   <Link to={`/edit?redirectTo=edit&id=${vehicle.id}`} className="button edit-button">
                     Editar
-                    {/* <button>
-                      Editar
-                    </button>  */}
                   </Link> 
-                  <button
-                    className="delete-button"
-                    onClick={() => handleDelete(vehicle.id)}
-                  >
-                    Deletar
-                  </button>
+                  <Link to={`/delete?redirectTo=delete&id=${vehicle.id}`} className="button delete-button">
+                    Deletar 
+                   </Link> 
                 </div>
               )}
             </div>
