@@ -2,6 +2,10 @@ using CleanArchMvc.Infra.IoC;
 using Microsoft.OpenApi.Models;
 using System.Net;
 using System.Reflection;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 var AllowOrigin = "AllowOrigin";
 
@@ -19,9 +23,7 @@ builder.Services.AddCors(options =>
                           .AllowCredentials();
                       });
 });
-// Add services to the container.
 builder.Services.AddInfrastructureAPI(builder.Configuration);
-//ativar autenticacao e validar o token
 builder.Services.AddInfrastructureJWT(builder.Configuration);
 builder.Services.AddInfrastructureSwagger();
 

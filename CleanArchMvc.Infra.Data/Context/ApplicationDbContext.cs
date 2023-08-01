@@ -2,6 +2,9 @@
 using CleanArchMvc.Infra.Data.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace CleanArchMvc.Infra.Data.Context;
 

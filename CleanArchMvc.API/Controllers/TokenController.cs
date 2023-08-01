@@ -25,8 +25,6 @@ public class TokenController : ControllerBase
         _configuration = configuration;
     }
     [HttpPost("CreateUser")]
-    [ApiExplorerSettings(IgnoreApi = true)]
-    [Authorize]
     public async Task<ActionResult> CreateUser([FromBody] LoginModel userInfo)
     {
         var result = await _authentication.RegisterUser(userInfo.Email, userInfo.Password);
