@@ -2,10 +2,6 @@ using CleanArchMvc.Infra.IoC;
 using Microsoft.OpenApi.Models;
 using System.Net;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 var AllowOrigin = "AllowOrigin";
 
