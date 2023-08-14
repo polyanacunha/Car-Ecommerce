@@ -28,3 +28,8 @@
 
 username: admin@example.com
 password: Admin4321.
+
+## Para testar a API no Swagger 
+1. cd CleanArchMVC.API
+2. dotnet run
+3. ir para "http://localhost:5143/swagger/index.html" 
