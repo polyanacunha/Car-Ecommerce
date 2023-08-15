@@ -21,12 +21,12 @@
 
 ## Docker 
 docker run 
+
 ## Se quiser rodar as migrations
 - dotnet tool install --global dotnet-ef
 - dotnet ef database update --project CleanArchMvc.Infra.Data -s CleanArchMvc.API -c ApplicationDbContext --verbose
 
 ## Usuário com cargo de admin para fins de teste: 
-
 username: admin@example.com
 password: Admin4321.
 
