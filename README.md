@@ -19,7 +19,8 @@
 2. npm install
 3. npm start
 
-
+## Docker 
+docker run 
 ## Se quiser rodar as migrations
 - dotnet tool install --global dotnet-ef
 - dotnet ef database update --project CleanArchMvc.Infra.Data -s CleanArchMvc.API -c ApplicationDbContext --verbose
