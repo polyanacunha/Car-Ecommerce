@@ -1,0 +1,13 @@
+# Estágio 1: Construir a aplicação ReactJS
+FROM node:14 AS build
+WORKDIR /app
+COPY CleanArchMvc.Frontend/vehicle-catalog/src/package.json /app/
+RUN npm install
+COPY CleanArchMvc.Frontend/vehicle-catalog .
+RUN npm run build
+
+# Estágio 2: Preparar o servidor web para servir os arquivos de build
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

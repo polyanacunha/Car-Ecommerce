@@ -1,10 +1,14 @@
-version: '3.8'
+version: '3'
 services:
-  sql-server:
-    image: mcr.microsoft.com/mssql/server
-    container_name: sql-server
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=1YourStrong!Password
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
     ports:
-      - 1433:1433
+      - "5143:5143"  
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
+    ports:
+      - "3000:3000"  
