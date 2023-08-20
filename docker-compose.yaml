@@ -1,14 +1,13 @@
-version: '3'
+version: '3.8'
 services:
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile-backend
+  dotnet:
+  
+  postgres-db:
+    image: postgres
+    container_name: postgres-container
+    environment:
+      POSTGRES_DB: polyana
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: changeme
     ports:
-      - "5143:5143"  
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile-frontend
-    ports:
-      - "3000:3000"  
+      - 5432:5432
