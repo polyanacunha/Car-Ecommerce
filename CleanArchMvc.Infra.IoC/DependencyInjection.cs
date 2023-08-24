@@ -4,6 +4,9 @@ using CleanArchMvc.Infra.Data.Context;
 using CleanArchMvc.Infra.Data.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,8 +18,9 @@ public static class DependencyInjection
         IConfiguration configuration)
     {
         services.AddDbContext<ApplicationDbContext>(options =>
-         options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"
+         options.UseNpgsql(configuration.GetConnectionString("Server=localhost:5432;Database=postgres;User Id=postgres;Password=changeme;TrustServerCertificate=True"
         ), b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+        
 
         services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()

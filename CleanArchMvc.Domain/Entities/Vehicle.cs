@@ -1,7 +1,9 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using CleanArchMvc.Domain.Validation;
 
 namespace CleanArchMvc.Domain.Entities;
 
+[Table("vehicle")]
 public sealed class Vehicle : Entity
 {
     public string Nome { get; private set; }

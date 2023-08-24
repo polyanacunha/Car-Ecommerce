@@ -11,6 +11,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 namespace CleanArchMvc.Infra.IoC;
+using Microsoft.EntityFrameworkCore.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 public static class DependencyInjectionAPI
 {

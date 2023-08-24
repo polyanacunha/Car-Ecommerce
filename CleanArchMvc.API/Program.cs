@@ -2,6 +2,10 @@ using CleanArchMvc.Infra.IoC;
 using Microsoft.OpenApi.Models;
 using System.Net;
 using System.Reflection;
+using Microsoft.EntityFrameworkCore.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Design.Internal;
 
 var AllowOrigin = "AllowOrigin";
 
@@ -25,6 +29,8 @@ builder.Services.AddInfrastructureSwagger();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSingleton<IDesignTimeServices>(new NpgsqlDesignTimeServices());
+
 //builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -41,7 +47,7 @@ builder.Services.AddSwaggerGen(options =>
         },
         License = new OpenApiLicense
         {
-            Name = "Licen�a",
+            Name = "License",
             Url = new Uri("https://examplo.com/licenca")
         }
     });
